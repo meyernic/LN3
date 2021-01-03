@@ -35,7 +35,7 @@ public class PersonRestController {
 	}
 
 	@RequestMapping(value = "shiftplanner/persons/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Person> getPathogenById(@PathVariable("id") long id) {
+	public ResponseEntity<Person> getPersonById(@PathVariable("id") long id) {
 		Optional<Person> result = this.repository.findById(id);
 
 		if (result.isPresent()) {

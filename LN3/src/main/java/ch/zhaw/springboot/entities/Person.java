@@ -20,10 +20,10 @@ public class Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-
-	private String lastname;
+	
 	private String firstname;
-	private long birthdate;
+	private String lastname;
+	private long ahv;
 	private String adress;
 	private long number; 
 
@@ -39,10 +39,10 @@ public class Person {
 	
 
 	
-	public Person(String firstname, String lastname, long birthdate, String adress, long number) {
+	public Person(String firstname, String lastname, long ahv, String adress, long number) {
 		this.firstname = firstname;
 		this.lastname = lastname;
-		this.birthdate = birthdate;
+		this.ahv = ahv;
 		this.adress = adress;
 		this.number = number;
 	}
@@ -63,8 +63,8 @@ public class Person {
 		return firstname;
 	}
 
-	public long getBirthdate() {
-		return birthdate;
+	public long getAhv() {
+		return ahv;
 	}
 
 	public String getAdress() {

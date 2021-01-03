@@ -1,7 +1,7 @@
 package ch.zhaw.springboot.entities;
 
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,17 +19,17 @@ public class Shift {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	private long time;
-	private long datum;
+	private long duration;
+	private Date datum;
 	
 	@ManyToMany(mappedBy = "shifts")
 	private Set<Person> persons = new HashSet<>();
 	
 	@ManyToOne
-	private Location location;
+	private Venture venture;
 	
-	public Shift(long time, long datum, String breaks)	{
-		this.time = time;
+	public Shift(long duration, Date datum)	{
+		this.duration = duration;
 		this.datum = datum;
 	}
 	
@@ -41,11 +41,11 @@ public class Shift {
 		return id;
 	}
 
-	public long getTime() {
-		return time;
+	public long getDuration() {
+		return duration;
 	}
 
-	public long getDatum() {
+	public Date getDatum() {
 		return datum;
 	}
 }
