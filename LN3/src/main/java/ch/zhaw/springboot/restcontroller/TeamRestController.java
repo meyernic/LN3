@@ -34,7 +34,7 @@ public class TeamRestController {
 	}
 
 	@RequestMapping(value = "shiftplanner/teams/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Team> getPathogenById(@PathVariable("id") long id) {  // Pathogen anpassen
+	public ResponseEntity<Team> getTeamById(@PathVariable("id") long id) {  // Pathogen anpassen
 		Optional<Team> result = this.repository.findById(id); 
 
 		if (result.isPresent()) {

@@ -35,7 +35,7 @@ public class ShiftRestController {
 	}
 
 	@RequestMapping(value = "shiftplanner/shifts/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Shift> getPathogenById(@PathVariable("id") long id) {  // getPathogenById anpassen
+	public ResponseEntity<Shift> getShiftById(@PathVariable("id") long id) {  // getPathogenById anpassen
 		Optional<Shift> result = this.repository.findById(id);
 
 		if (result.isPresent()) {

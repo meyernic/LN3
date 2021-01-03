@@ -35,7 +35,7 @@ public class AbsenceRestController {
 	}
 
 	@RequestMapping(value = "shiftplanner/absences/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Absence> getPathogenById(@PathVariable("id") long id) {  // Pathogen anpassen
+	public ResponseEntity<Absence> getAbsenceById(@PathVariable("id") long id) {  // Pathogen anpassen
 		Optional<Absence> result = this.repository.findById(id); 
 
 		if (result.isPresent()) {
