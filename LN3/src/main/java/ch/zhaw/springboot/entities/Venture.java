@@ -23,7 +23,7 @@ public class Venture {
 		this.name = name;
 	}
 
-	public Venture() {
+	public Venture() { 
 
 	}
 
