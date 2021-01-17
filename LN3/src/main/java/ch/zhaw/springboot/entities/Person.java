@@ -23,7 +23,7 @@ public class Person {
 	
 	private String firstname;
 	private String lastname;
-	private long ahv;
+	private String ahv;
 	private String adress;
 	private long number; 
 
@@ -39,7 +39,7 @@ public class Person {
 	
 
 	
-	public Person(String firstname, String lastname, long ahv, String adress, long number) {
+	public Person(String firstname, String lastname, String ahv, String adress, long number) {
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.ahv = ahv;
@@ -63,7 +63,7 @@ public class Person {
 		return firstname;
 	}
 
-	public long getAhv() {
+	public String getAhv() {
 		return ahv;
 	}
 

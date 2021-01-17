@@ -1,6 +1,8 @@
 package ch.zhaw.springboot.entities;
 
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,14 +16,14 @@ public class Absence {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	private long startdate;
-	private long enddate;
+	private String startdate;
+	private String enddate;
 	private String reason;
 	
 	@ManyToOne
 	private Person person;
 	
-	public Absence(long startdate, long enddate, String reason) {
+	public Absence(String startdate, String enddate, String reason) {
 		this.startdate = startdate;
 		this.enddate = enddate;
 		this.reason = reason;
@@ -31,11 +33,11 @@ public class Absence {
 		
 	}
 
-	public long getStartdate() {
+	public String getStartdate() {
 		return startdate;
 	}
 
-	public long getEnddate() {
+	public String getEnddate() {
 		return enddate;
 	}
 

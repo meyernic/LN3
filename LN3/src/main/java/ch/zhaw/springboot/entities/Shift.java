@@ -19,7 +19,7 @@ public class Shift {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	private long duration;
+	private String duration;
 	private Date datum;
 	
 	@ManyToMany(mappedBy = "shifts")
@@ -28,7 +28,7 @@ public class Shift {
 	@ManyToOne
 	private Venture venture;
 	
-	public Shift(long duration, Date datum)	{
+	public Shift(String duration, Date datum)	{
 		this.duration = duration;
 		this.datum = datum;
 	}
@@ -41,7 +41,7 @@ public class Shift {
 		return id;
 	}
 
-	public long getDuration() {
+	public String getDuration() {
 		return duration;
 	}
 
